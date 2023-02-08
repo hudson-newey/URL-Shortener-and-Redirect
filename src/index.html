@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grathium Industries Redirect</title>
+    <script defer src="./ts/dist/scripts.js"></script>
+    <link
+      defer
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <h1 id="redirect-notice">Create Webpage Redirect...</h1>
+
+    <div class="content">
+      <div class="d-flex w-75 pb-2">
+        <input
+          id="new-redirect-url"
+          type="url"
+          class="form-control"
+          onkeydown="validateInput(event);"
+          placeholder="Please input a new URL"
+        />
+      </div>
+      <h3>Google Analytics Token (Optional)</h3>
+      <p>
+        Your Google Analytics token should look something like
+        <code>G-R24*******</code><br>
+        This token allows your to track who clicks your links, and from where, etc...
+      </p>
+      <div class="d-flex w-75">
+        <input
+          id="analytics-input"
+          type="url"
+          class="form-control"
+          onkeydown="validateInput(event);"
+          placeholder="(Optional) Please Input a Google Analytics Token"
+        />
+      </div>
+
+      <button class="btn btn-primary m-3" onclick="createRedirectURL();">
+        Create
+      </button>
+    </div>
+  </body>
+</html>
